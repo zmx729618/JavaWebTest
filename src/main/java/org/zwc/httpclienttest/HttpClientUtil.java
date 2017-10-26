@@ -9,7 +9,6 @@ import org.apache.http.impl.client.DefaultHttpRequestRetryHandler;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.protocol.HttpContext;
-import org.junit.Test;
 
 
 /**
@@ -48,9 +47,8 @@ public class HttpClientUtil {
         return httpClient;
     }
 
+    public static void main(String[] args) {
 
-    @Test
-    public void test1(){
         HttpPost httpPost=new HttpPost("http://www.baidu11.com");
         try {
             CloseableHttpClient  httpClient = getHttpClient();
@@ -61,6 +59,8 @@ public class HttpClientUtil {
         }finally{
 
         }
+
     }
+
 
 }
