@@ -49,7 +49,7 @@ public class HttpClientUtil {
 
     public static void main(String[] args) {
 
-        HttpPost httpPost=new HttpPost("http://www.baidu11.com");
+        HttpPost httpPost=new HttpPost("http://www.baidu.com");
         try {
             CloseableHttpClient  httpClient = getHttpClient();
             CloseableHttpResponse rsp=httpClient.execute(httpPost);
