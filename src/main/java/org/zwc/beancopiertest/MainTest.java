@@ -1,7 +1,6 @@
 package org.zwc.beancopiertest;
 
 import net.sf.cglib.beans.BeanCopier;
-import org.springframework.util.Assert;
 
 /**
  * Created by zhangwenchao on 2017/10/27.
