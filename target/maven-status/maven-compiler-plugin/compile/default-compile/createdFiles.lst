@@ -1,0 +1,15 @@
+org\zwc\enumtest\MainTest.class
+org\zwc\log4j2test\MainTest.class
+org\zwc\ssm\service\impl\UserServiceImpl.class
+org\zwc\httpclienttest\HttpClientUtil$1.class
+org\zwc\ssm\service\IUserService.class
+org\zwc\httpclienttest\HttpClientUtil.class
+org\zwc\ssm\web\UserController.class
+org\zwc\enumtest\StringToGoodsConverter.class
+org\zwc\beancopiertest\MainTest.class
+org\zwc\beancopiertest\OrderDTO.class
+org\zwc\ssm\domain\User.class
+org\zwc\test\Test1.class
+org\zwc\enumtest\GoodsPromoteEnum.class
+org\zwc\ssm\dao\IUserDao.class
+org\zwc\beancopiertest\Order.class
