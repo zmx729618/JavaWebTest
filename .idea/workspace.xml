@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="681ff01b-aee0-4e83-8701-383ba9917a9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/zwc/encryptTest/DESCryptography.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/zwc/ssm/web/UserController.class" afterPath="$PROJECT_DIR$/target/classes/org/zwc/ssm/web/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/zwc/encryptTest/AESCrptography.java" afterPath="$PROJECT_DIR$/src/main/java/org/zwc/encryptTest/AESCrptography.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mvcconfig/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/classes/mvcconfig/spring-mvc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mvcconfig/view-controller.xml" afterPath="$PROJECT_DIR$/target/classes/mvcconfig/view-controller.xml" />
@@ -1224,7 +1222,7 @@
       <workItem from="1509505417061" duration="14182000" />
       <workItem from="1509584882138" duration="6577000" />
       <workItem from="1509930819384" duration="9166000" />
-      <workItem from="1510016819756" duration="661000" />
+      <workItem from="1510016819756" duration="701000" />
     </task>
     <task id="LOCAL-00001" summary="first commit class">
       <created>1508987163858</created>
@@ -1296,7 +1294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509935359661</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="first commit class">
+      <created>1510024662350</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1510024662351</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1332,7 +1337,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75576000" />
+    <option name="totallyTimeSpent" value="75616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-31" y="15" width="1382" height="728" extended-state="0" />
@@ -1690,6 +1695,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1704,6 +1710,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="22" column="72" lean-forward="false" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1711,6 +1720,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
