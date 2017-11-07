@@ -15,6 +15,8 @@
     <!-- 配置数据库相关参数properties的属性：${url} -->
     <context:property-placeholder location="classpath*:/application.properties"/>
 
+    <!-- 对没有配置在IOC里类进行依赖注入-->
+    <context:spring-configured />
 
     <!-- 扫描base-package包下所有使用注解的类型(依赖注入父容器) -->
     <context:component-scan base-package="org.zwc.ssm">

@@ -61,13 +61,15 @@ public class AESCrptography {
 
     public static void main(String[] args) {
 
-        String content="hello";
+        String content="hello,hero! this is a  secret to you ";
         String key="aaaaaaaa";
         String iv="abcdefghijklmnop";
 
         System.out.println("加密前："+byteToHexString(content.getBytes()));
         byte[ ] encrypted=AES_CBC_Encrypt(content.getBytes(), key.getBytes(), iv.getBytes());
+        System.out.println(encrypted.length);
         System.out.println("加密后："+byteToHexString(encrypted));
+        System.out.println(byteToHexString(encrypted).length());
         byte[ ] decrypted=AES_CBC_Decrypt(encrypted, key.getBytes(), iv.getBytes());
         System.out.println("解密后："+byteToHexString(decrypted));
     }

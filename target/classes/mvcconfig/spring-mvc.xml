@@ -31,8 +31,6 @@
                 <ref bean="msgConverter"/>
             </list>
         </property>
-
-
     </bean>
 
 
@@ -57,10 +55,10 @@
         <property name="defaultErrorView" value="error" />
         <property name="exceptionMappings">
             <props>
-                <prop key=".DataAccessException">dataAccessFailure</prop>
-                <prop key=".NoSuchRequestHandlingMethodException">resourceNotFound</prop>
-                <prop key=".TypeMismatchException">resourceNotFound</prop>
-                <prop key=".lang.Exception">uncaughtException</prop>
+                <prop key=".DataAccessException">error/dataAccessFailure</prop>
+                <prop key=".NoSuchRequestHandlingMethodException">error/resourceNotFound</prop>
+                <prop key=".TypeMismatchException">error/resourceNotFound</prop>
+                <prop key=".lang.Exception">error/uncaughtException</prop>
             </props>
         </property>
     </bean>
@@ -77,7 +75,5 @@
         <property name="basename" value="message/message-info" />
         <property name="useCodeAsDefaultMessage" value="true" />
     </bean>
-
-
 
 </beans>

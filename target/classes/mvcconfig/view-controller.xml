@@ -11,8 +11,7 @@
 
     <mvc:view-controller path="/index"  />
     <mvc:view-controller path="/"  />
-    <mvc:view-controller path="/uncaughtException" />
-    <mvc:view-controller path="/resourceNotFound"  />
-    <mvc:view-controller path="/dataAccessFailure"  />
+    <mvc:view-controller path="/error/*"  />
+    <mvc:view-controller path="/navigation/*"  />
 
 </beans>
