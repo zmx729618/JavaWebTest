@@ -15,14 +15,14 @@
     <!-- 配置数据库相关参数properties的属性：${url} -->
     <context:property-placeholder location="classpath*:/application.properties"/>
 
+    <!-- 对没有配置在IOC里类进行依赖注入-->
+    <context:spring-configured />
 
     <!-- 扫描base-package包下所有使用注解的类型(依赖注入父容器) -->
     <context:component-scan base-package="org.zwc.ssm">
         <!-- 排除@controller注解（子容器中配置） -->
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
-
-
 
     <!-- 数据库连接池 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
@@ -65,7 +65,6 @@
 
     <!-- 配置基于注解的声明式事务 -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
-
 
 
     <!-- 配置RestTemplate -->

@@ -24,8 +24,6 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
 
-
-
     <!-- 数据库连接池 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="${db.driver}"/>
@@ -67,7 +65,6 @@
 
     <!-- 配置基于注解的声明式事务 -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
-
 
 
     <!-- 配置RestTemplate -->

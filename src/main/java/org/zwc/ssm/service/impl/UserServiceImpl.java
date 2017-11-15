@@ -10,6 +10,7 @@ import org.zwc.ssm.domain.User;
 import org.zwc.ssm.service.IUserService;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service("userService")
 public class UserServiceImpl implements IUserService {
@@ -20,6 +21,10 @@ public class UserServiceImpl implements IUserService {
     public User selectUser(long userId) {
 
         return this.userDao.selectUser(userId);
+    }
+
+    public List<User> getUserList() {
+        return this.userDao.getUserList();
     }
 
 }

@@ -13,6 +13,7 @@ import org.zwc.ssm.dao.IUserDao;
 import org.zwc.ssm.domain.User;
 
 import javax.inject.Inject;
+import java.util.List;
 
 // 加载spring配置文件
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,6 +29,19 @@ public class UserDaoTest {
         User user = userDao.selectUser(id);
         System.out.println(user.getUsername());
         Assert.assertEquals("xiaoming",user.getUsername());
+
+    }
+
+
+
+
+    @Test
+    public void testGetUserList() throws Exception {
+
+        List<User> userList = userDao.getUserList();
+        for(User u : userList){
+            System.out.println(u.getUsername());
+        }
 
     }
 

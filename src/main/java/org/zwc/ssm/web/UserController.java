@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.zwc.ssm.domain.User;
 import org.zwc.ssm.service.IUserService;
@@ -12,6 +13,7 @@ import org.zwc.ssm.service.IUserService;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 
 /**
@@ -33,6 +35,18 @@ public class UserController {
         ObjectMapper mapper = new ObjectMapper();
         response.getWriter().write(mapper.writeValueAsString(user));
         response.getWriter().close();
+    }
+
+
+    @RequestMapping("/user/list")
+    public String getUserList(ModelMap modelMap)  {
+
+       List<User>  userList = this.userService.getUserList();
+
+       modelMap.addAttribute("list",userList);
+
+       return "/user/list";
+
     }
 
 }

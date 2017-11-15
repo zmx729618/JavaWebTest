@@ -1,4 +1,4 @@
-package org.zwc.encryptTest;
+package org.zwc.encrypttest;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
