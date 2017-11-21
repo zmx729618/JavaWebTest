@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.zwc.ssm.domain.User;
 import org.zwc.ssm.service.IUserService;
 
@@ -23,7 +24,7 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    @Resource
+    @Resource(name="userService")
     private IUserService userService;
 
     @RequestMapping("/user/showUser")
@@ -48,5 +49,20 @@ public class UserController {
        return "/user/list";
 
     }
+
+
+
+    @RequestMapping("/user/login")
+    @ResponseBody
+    public String login(String username,String password, ModelMap modelMap, HttpServletRequest request)  {
+
+        request.getSession().setAttribute("user",username);
+
+        return "ok";
+
+    }
+
+
+
 
 }

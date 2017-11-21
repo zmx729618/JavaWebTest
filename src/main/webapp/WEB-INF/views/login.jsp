@@ -7,6 +7,8 @@
 <head>
     <title>用户登陆</title>
 
+    <script type="text/javascript" src="${ctx}/js/jquery/jquery.js"></script>
+
     <script type="text/javascript">
         //登陆加载
         function btnClick(){
@@ -20,12 +22,12 @@
                 return;
             } else{
                 $.ajax({
-                    url:"login_login.action",
-                    type:"post",
-                    data:{username:$("#username").val(),password:$("#password").val(),authcode:$("#authcode").val()},
+                    url:"${ctx}/user/login?d="+new Date(),
+                    type:"POST",
+                    data:{username:$("#username").val(), password:$("#password").val()},
                     success:function(data){
-                        if(data == "0"){
-                            $("#myForm").attr("action","/index");
+                        if(data == "ok"){
+                            $("#myForm").attr("action","${lastPage}");
                             $("#myForm").submit();
                         }else if(data == "2"){
                             $("#usernameMsg").html(alert("验证码不正确！"));
@@ -36,7 +38,6 @@
                         }else{
                             $("#usernameMsg").html(alert("用户名或密码不正确！"));
                         }
-                        changeAuthCode();
                     }
                 });
             }
@@ -94,7 +95,7 @@
 <body class="login_body_bg" onload="getCookie();">
 <div  class="login_bg">
     <div class="loginbox">
-        <form action="" id="myForm" method="post">
+        <form id="myForm" method="POST">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                     <td width="58%">账号：<input type="text" tabindex="1" id="username" name="username" class="text" /></td>
