@@ -1,4 +1,4 @@
-package org.zwc.innerClasstest;
+package org.zwc.innerclasstest;
 
 /**
  * 成员内部类测试---定义在外部类成员变量位置

@@ -1,4 +1,4 @@
-package org.zwc.innerClasstest;
+package org.zwc.innerclasstest;
 
 /**
  * Created by zhangwenchao on 2017/11/23.

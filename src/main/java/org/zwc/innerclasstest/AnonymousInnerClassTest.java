@@ -1,4 +1,4 @@
-package org.zwc.innerClasstest;
+package org.zwc.innerclasstest;
 
 /**
  * 匿名内部类测试：匿名内部类是一个局部内类，一定是在new的后面，用其隐含实现一个接口或实现一个类

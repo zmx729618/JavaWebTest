@@ -1,4 +1,4 @@
-package org.zwc.innerClasstest;
+package org.zwc.innerclasstest;
 
 /**
  * 局部内部类测试---定义在外部类的方法中，并且只能在定义该内部类的方法内实例化
