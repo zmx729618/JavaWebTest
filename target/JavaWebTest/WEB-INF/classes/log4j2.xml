@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" monitorInterval="10">
+    <Properties>
+        <!-- 配置日志文件输出目录 -->
+        <Property name="LOG_DIR">E:/data/logs</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] %l --> %m %n"/>
+        </Console>
+
+        <RollingFile name="RollingFile" fileName="${LOG_DIR}/webApp.log"
+                     filePattern="${LOG_DIR}/web_debug.log.%d{yyyy-MM-dd}">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] %l --> %m %n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+
+        <File name="Filelog" fileName="${LOG_DIR}/lms.log" append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </File>
+
+
+        <Async name="asyncAppender" includeLocation="true">
+            <AppenderRef ref="RollingFile"/>
+            <AppenderRef ref="Filelog"/>
+        </Async>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+            <AppenderRef ref="Filelog"/>
+        </Root>
+        <!--过滤掉spring的一些无用的DEBUG信息-->
+        <Logger name="org.springframework" level="ERROR"/>
+    </Loggers>
+
+    <!--
+    这里要说明的一点是，使用.class为参数生成的logger，在配置文件中，与用全路径的包名或者类名，配置Logger标签相对应，
+    例如：<Logger name="org.springframework" level="ERROR"/>。
+    如果参数是字符串，例如org.slf4j.LoggerFactory.getLogger("test")，
+    对应的Logger标签配置为<Logger name="test" level="ERROR"/>
+    -->
+
+    <!--
+    java使用log4j2
+    // log4j2方式
+    private static final org.apache.logging.log4j.Logger logger = org.apache.logging.log4j.LogManager.getLogger(Test.class);
+
+    // slf4j方式
+    private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(Test.class);
+    -->
+
+</Configuration>

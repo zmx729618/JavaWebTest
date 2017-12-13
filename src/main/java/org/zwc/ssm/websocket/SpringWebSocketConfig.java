@@ -12,14 +12,18 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 /**
  * Created by zhangwenchao on 2017/11/20.
  */
-
-@Configuration
+// 进行junit测试时候，如果不注释掉，会报异常
+/*@Configuration
 @EnableWebMvc
-@EnableWebSocket
+@EnableWebSocket*/
 public class SpringWebSocketConfig extends WebMvcConfigurerAdapter implements WebSocketConfigurer {
+
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(webSocketHandler(),"/websocket/socketServer.do").addInterceptors(new SpringWebSocketHandlerInterceptor());
-        registry.addHandler(webSocketHandler(), "/sockjs/socketServer.do").addInterceptors(new SpringWebSocketHandlerInterceptor()).withSockJS();
+        registry.addHandler(webSocketHandler(),"/websocket/socketServer.do")
+                .addInterceptors(new SpringWebSocketHandlerInterceptor());
+
+        registry.addHandler(webSocketHandler(), "/sockjs/socketServer.do")
+                .addInterceptors(new SpringWebSocketHandlerInterceptor()).withSockJS();
     }
 
     @Bean

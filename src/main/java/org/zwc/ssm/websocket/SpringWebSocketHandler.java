@@ -37,9 +37,11 @@ public class SpringWebSocketHandler extends TextWebSocketHandler {
      */
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
 
-        System.out.println("成功建立websocket连接，当前数量:"+users.size());
+        System.out.println("成功建立websocket连接!");
         String userId = (String) session.getAttributes().get(USER_ID);
         users.put(userId,session);
+        System.out.println("当前线上用户数量:"+users.size());
+
         //这块会实现自己业务，比如，当用户登录后，会把离线消息推送给用户
         //TextMessage returnMessage = new TextMessage("成功建立socket连接，你将收到的离线");
         //session.sendMessage(returnMessage);
