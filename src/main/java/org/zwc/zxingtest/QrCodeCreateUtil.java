@@ -56,8 +56,10 @@ public class QrCodeCreateUtil {
 
         //创建比特矩阵(位矩阵)的QR码编码的字符串
         BitMatrix byteMatrix = qrCodeWriter.encode(content, BarcodeFormat.QR_CODE, qrCodeSize, qrCodeSize, hintMap);
+
         // 使BufferedImage勾画QRCode  (matrixWidth 是行二维码像素点)
         int matrixWidth = byteMatrix.getWidth();
+
         //新建一个内存缓存图片----图片大小为qrCodeSize-200(注：byteMatrix会存在一些白色边框，根据生成图片的大小白色边框大小不一样)
         BufferedImage image = new BufferedImage(matrixWidth - 200, matrixWidth - 200, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics = image.createGraphics();
