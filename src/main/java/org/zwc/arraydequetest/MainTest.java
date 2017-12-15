@@ -1,9 +1,10 @@
-package org.zwc.ArrayDequeTest;
+package org.zwc.arraydequetest;
 
 import java.util.ArrayDeque;
 
 /**
  * Created by zhangwenchao on 2017/12/13.
+ * java中stack和deque的数据结构
  */
 public class MainTest {
 
