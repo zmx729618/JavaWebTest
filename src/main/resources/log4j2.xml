@@ -2,7 +2,7 @@
 <Configuration status="INFO" monitorInterval="10">
     <Properties>
         <!-- 配置日志文件输出目录 -->
-        <Property name="LOG_DIR">E:/data/logs</Property>
+        <Property name="LOG_DIR">E:/logs</Property>
     </Properties>
 
     <Appenders>
@@ -11,7 +11,7 @@
         </Console>
 
         <RollingFile name="RollingFile" fileName="${LOG_DIR}/webApp.log"
-                     filePattern="${LOG_DIR}/web_debug.log.%d{yyyy-MM-dd}">
+                     filePattern="${LOG_DIR}/webApp.log.%d{yyyy-MM-dd}">
             <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
             <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss}] [%5p] %l --> %m %n"/>
