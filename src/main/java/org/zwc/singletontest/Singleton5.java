@@ -7,14 +7,15 @@ public enum Singleton5 {
 
     INSTANCE;
 
-    public String getStirng(){
+    public String getString(){
         return "xxxxxxx";
     }
 
 
     public static void main(String[] args) {
 
-        System.out.println(Singleton5.INSTANCE.getStirng());
+        System.out.println(Singleton5.INSTANCE.getString());
+
 
     }
 
